@@ -16,6 +16,9 @@ source ~/Dotfiles/vim/vim-move.vim
 "Enable syntax highlighting
 syntax enable
 
+" Disable code wrapping
+set nowrap
+
 " Set the color scheme
 let g:enable_bold_font = 1
 
