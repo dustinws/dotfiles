@@ -20,6 +20,7 @@ Plugin 'yegappan/mru'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'itchyny/lightline.vim'
 
 " Required to end plugin management
 call vundle#end()

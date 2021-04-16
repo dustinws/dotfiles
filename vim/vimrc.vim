@@ -3,7 +3,7 @@
 
 " Bring in 3rd party plugins
 source ~/Dotfiles/vim/plugins.vim
-
+source ~/Dotfiles/vim/lightline.vim
 
 
 
