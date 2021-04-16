@@ -12,6 +12,7 @@ call vundle#begin()
 
 " Register Plugins
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'matze/vim-move'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-vinegar'
 Plugin 'ctrlpvim/ctrlp.vim'

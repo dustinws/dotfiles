@@ -5,6 +5,7 @@
 source ~/Dotfiles/vim/plugins.vim
 source ~/Dotfiles/vim/lightline.vim
 source ~/Dotfiles/vim/ctrlp.vim
+source ~/Dotfiles/vim/vim-move.vim
 
 
 
@@ -17,9 +18,17 @@ syntax enable
 
 " Set the color scheme
 let g:enable_bold_font = 1
+
 " let g:enable_italic_font = 1
 let g:hybrid_transparent_background = 1
+
+" Set the colorscheme. For hybrid material to work correctly, the previous
+" two lines need to run before this colorscheme is set.
 colorscheme hybrid_material
+
+" Show the ruler at line 81 because lines longer than 80 characters
+" can be a bit obfuscated
+set colorcolumn=81
 
 " Show line numbers
 set number
