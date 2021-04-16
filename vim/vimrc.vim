@@ -10,6 +10,7 @@ source ~/Dotfiles/vim/vim-move.vim
 
 
 
+
 " Basics
 " ------
 
@@ -22,12 +23,20 @@ set nowrap
 " Set the color scheme
 let g:enable_bold_font = 1
 
-" let g:enable_italic_font = 1
+" Allow the color scheme to defer the background to the terminal
 let g:hybrid_transparent_background = 1
 
 " Set the colorscheme. For hybrid material to work correctly, the previous
 " two lines need to run before this colorscheme is set.
-colorscheme hybrid_material
+" colorscheme hybrid_material
+colorscheme hybrid_reverse 
+
+" Change vim's default italics
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
+" Allow comments to be italic
+highlight Comment cterm=italic
 
 " Show the ruler at line 81 because lines longer than 80 characters
 " can be a bit obfuscated

@@ -12,6 +12,8 @@ call vundle#begin()
 
 " Register Plugins
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-vinegar'
