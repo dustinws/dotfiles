@@ -1,0 +1,29 @@
+" Use the latest vim versions
+set nocompatible
+
+" Turn off the filetype during plugin initialization
+filetype off
+
+" Set the runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Initiate vundle
+call vundle#begin()
+
+" Register Plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-vinegar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'yegappan/mru'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ryanoasis/vim-devicons'
+
+" Required to end plugin management
+call vundle#end()
+
+" Turn then filetype back on
+filetype plugin indent on
+
