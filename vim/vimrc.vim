@@ -15,7 +15,10 @@ source ~/Dotfiles/vim/lightline.vim
 syntax enable
 
 " Set the color scheme
-colorscheme atom-dark-256
+let g:enable_bold_font = 1
+" let g:enable_italic_font = 1
+let g:hybrid_transparent_background = 1
+colorscheme hybrid_material
 
 " Show line numbers
 set number

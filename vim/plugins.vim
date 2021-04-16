@@ -21,6 +21,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'itchyny/lightline.vim'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 " Required to end plugin management
 call vundle#end()
