@@ -13,6 +13,7 @@ source ~/Dotfiles/vim/plugins.vim
 source ~/Dotfiles/vim/lightline.vim
 source ~/Dotfiles/vim/ctrlp.vim
 source ~/Dotfiles/vim/vim-move.vim
+source ~/Dotfiles/vim/disable-arrows.vim
 
 set termguicolors
 
@@ -32,6 +33,7 @@ set nowrap
 " Allow completion to use any open or loaded buffers
 set complete=.,w,b,u
 
+
 " Set the color scheme
 let g:enable_bold_font = 1
 
@@ -42,6 +44,12 @@ let g:hybrid_transparent_background = 1
 " two lines need to run before this colorscheme is set.
 " colorscheme hybrid_material
 colorscheme hybrid_reverse 
+
+" Show line numbers
+set relativenumber
+
+" Change the color of the line numbers
+highlight LineNr guifg=#ab5aad
 
 " Change vim's default italics
 let &t_ZH="\e[3m"
@@ -54,9 +62,6 @@ highlight Comment cterm=italic
 " can be a bit obfuscated
 set colorcolumn=81
 
-" Show line numbers
-set number
-
 " Allow the backspace to work like other editors
 set backspace=indent,eol,start
 
@@ -65,8 +70,6 @@ let mapleader = ','
 
 " Enforce UTF8 encoding
 set encoding=UTF-8
-
-set guifont=Hack_Nerd_Font:h20
 
 
 
@@ -124,6 +127,12 @@ nmap <C-p> :CtrlP<cr>
 " Shortcut for MRU
 nmap <Leader>f :MRU<cr>
 
+" Remap the escape key
+imap jj <Esc>
+
+" Go down five lines when scrolling with ctrl e
+" This helps to speed up smooth scrolling
+nnoremap <C-e> 5<C-e>
 
 
 
@@ -140,6 +149,13 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+" Allow Ctrl E scrolling to move five lines each scroll
+" Helpful for faster scrolling.
+nnoremap <C-e> 5<C-e>
+
+" Do the same for Ctrl Y scrolling
+nnoremap <C-y> 5<C-y>
+
 
 
 
@@ -150,4 +166,3 @@ augroup autosourcing
   autocmd!
   autocmd BufWritePost .vimrc source %
 augroup END
-
