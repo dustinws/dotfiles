@@ -5,4 +5,4 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$PATH:/Users/dustin/.composer/vendor/bin
 
 # Add my own custom scripts
-path+=/Users/dustin/Dotfiles/bin/
+export PATH=$PATH:/Users/dustin/Dotfiles/bin/
