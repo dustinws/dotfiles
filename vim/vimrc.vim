@@ -107,6 +107,10 @@ set incsearch
 " Mappings
 " --------
 
+" Change the default o and O to stay in insert mode
+nnoremap o o<Esc>
+nnoremap O O<Esc>
+
 " Easily edit the vimrc file
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 

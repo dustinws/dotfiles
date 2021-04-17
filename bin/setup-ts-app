@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Allow the user to specify their own director
+mkdir $1
+cd $1
+
 # Initialize the git repository
 git init
 
