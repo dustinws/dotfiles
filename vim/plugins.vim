@@ -13,10 +13,6 @@ call vundle#begin()
 " Register Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-" Plugin 'ervandew/supertab'
 Plugin 'neoclide/coc.nvim'
 Plugin 'tpope/vim-commentary'
 Plugin 'pangloss/vim-javascript'
