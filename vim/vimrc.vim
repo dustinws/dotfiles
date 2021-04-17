@@ -70,8 +70,11 @@ set backspace=indent,eol,start
 let mapleader = ','
 
 " Enforce UTF8 encoding
-
 set encoding=UTF-8
+
+" By default vim puts new panes on top or to the left
+set splitright
+set splitbelow
 
 
 
