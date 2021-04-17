@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<C-p>	vim/vimrc.vim	/^nmap <C-p> :CtrlP<cr>$/;"	m
+<Leader><space>	vim/vimrc.vim	/^nmap <Leader><space> :nohlsearch<cr>$/;"	m
+<Leader>e	vim/vimrc.vim	/^nmap <Leader>e :NERDTreeToggle<cr>$/;"	m
+<Leader>ev	vim/vimrc.vim	/^nmap <Leader>ev :tabedit $MYVIMRC<cr>$/;"	m
+<Leader>f	vim/vimrc.vim	/^nmap <Leader>f :MRU<cr>$/;"	m
+<Leader>q	vim/vimrc.vim	/^nmap <Leader>q :q<cr>$/;"	m
+<Leader>w	vim/vimrc.vim	/^nmap <Leader>w :w<cr>$/;"	m
+<Leader>wq	vim/vimrc.vim	/^nmap <Leader>wq :wq<cr>$/;"	m
+autosourcing	vim/vimrc.vim	/^augroup autosourcing$/;"	a
+g:ctrlp_user_command	vim/ctrlp.vim	/^let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']$/;"	v
+g:enable_bold_font	vim/vimrc.vim	/^let g:enable_bold_font = 1$/;"	v
+g:hybrid_transparent_background	vim/vimrc.vim	/^let g:hybrid_transparent_background = 1$/;"	v
+g:lightline	vim/lightline.vim	/^let g:lightline = {$/;"	v
+g:move_key_modifier	vim/vim-move.vim	/^let g:move_key_modifier = 'C'$/;"	v
+mapleader	vim/vimrc.vim	/^let mapleader = ','$/;"	v

@@ -1,3 +1,10 @@
+" Add this folder to the runtime
+set rtp+=~/Dotfiles/vim
+
+
+
+
+
 " Plugins
 " -------
 
@@ -7,18 +14,23 @@ source ~/Dotfiles/vim/lightline.vim
 source ~/Dotfiles/vim/ctrlp.vim
 source ~/Dotfiles/vim/vim-move.vim
 
-
-
+set termguicolors
 
 
 " Basics
 " ------
+
+" Disable code folding
+set nofoldenable
 
 "Enable syntax highlighting
 syntax enable
 
 " Disable code wrapping
 set nowrap
+
+" Allow completion to use any open or loaded buffers
+set complete=.,w,b,u
 
 " Set the color scheme
 let g:enable_bold_font = 1
@@ -112,6 +124,21 @@ nmap <C-p> :CtrlP<cr>
 " Shortcut for MRU
 nmap <Leader>f :MRU<cr>
 
+
+
+
+
+" Off Hand Plugin Stuff
+" ---------------------
+
+" Tell COC to load the typescript server
+let g:coc_global_extensions = [ 'coc-tsserver' ]
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 
 
