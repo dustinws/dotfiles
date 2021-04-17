@@ -19,3 +19,6 @@ alias c="clear"
 # NodeJS Shortcuts
 alias t="npm test"
 alias tw="npm test -- --watch"
+
+# Alias tmux to use 256 colors
+alias tmux='tmux -2'
