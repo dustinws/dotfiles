@@ -16,7 +16,7 @@ source ~/Dotfiles/vim/vim-move.vim
 source ~/Dotfiles/vim/disable-arrows.vim
 source ~/Dotfiles/vim/snipmate.vim
 
-set termguicolors
+
 
 
 " Basics
@@ -46,12 +46,12 @@ let g:hybrid_transparent_background = 1
 " colorscheme hybrid_material
 colorscheme hybrid_reverse 
 
+" Highlight the current line
+set cursorline
+
 " Set hybrid line numbers
 set number
 set relativenumber
-
-" Change the color of the line numbers
-highlight LineNr guifg=#ab5aad
 
 " Change vim's default italics
 let &t_ZH="\e[3m"
