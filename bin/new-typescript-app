@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Clone the boilerplate repo I made
+echo "Cloning boilerplate from github..."
+git clone git@github.com:dustinws/typescript-node-boilerplate.git $1 &> /dev/null
+
+
+# Install node modules
+cd $1
+echo "Installing node modules..."
+npm install &> /dev/null
+
+# Installing node modules will change the package lock, so recommit it
+echo "Checking if npm install changed package-log.json..."
+git add . &> /dev/null
+git commit -m 'Change package lock due to npm install' &> /dev/null
+
+# Display a nice message
+
+echo " "
+echo " "
+echo " "
+echo " "
+echo "Project created in $(pwd)"
