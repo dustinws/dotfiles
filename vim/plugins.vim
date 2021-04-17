@@ -15,6 +15,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'tpope/vim-commentary'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'maxmellon/vim-jsx-pretty'
@@ -35,4 +38,3 @@ call vundle#end()
 
 " Turn then filetype back on
 filetype plugin indent on
-

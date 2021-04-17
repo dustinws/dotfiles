@@ -14,6 +14,7 @@ source ~/Dotfiles/vim/lightline.vim
 source ~/Dotfiles/vim/ctrlp.vim
 source ~/Dotfiles/vim/vim-move.vim
 source ~/Dotfiles/vim/disable-arrows.vim
+source ~/Dotfiles/vim/snipmate.vim
 
 set termguicolors
 
