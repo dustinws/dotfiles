@@ -6,6 +6,3 @@ export PATH=$PATH:/Users/dustin/.composer/vendor/bin
 
 # Add my own custom scripts
 path+=/Users/dustin/Dotfiles/bin/
-
-# Rust Cargo bin
-source $HOME/.cargo/env

@@ -2,6 +2,10 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "author": "Dustin Stiles <duwstiles@gmail.com>",
-  "scripts": {}
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo 'no test file specified'" 
+  }
 }

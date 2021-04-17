@@ -7,7 +7,7 @@ git init
 wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
 
 # Initialize the package.json
-npm init -y
+cp ~/Dotfiles/boilerplate/js.package.json package.json
 
 # Set up .nvmrc with the current node version
 echo $(node -v) > .nvmrc
