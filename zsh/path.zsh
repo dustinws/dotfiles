@@ -4,8 +4,8 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 # Composer Bin
 export PATH=$PATH:/Users/dustin/.composer/vendor/bin
 
+# Add my own custom scripts
+path+=/Users/dustin/Dotfiles/bin/
+
 # Rust Cargo bin
 source $HOME/.cargo/env
-
-# Add my own custom scripts
-export PATH=$PATH:/Users/dustin/Dotfiles/bin

@@ -22,3 +22,5 @@ alias tw="npm test -- --watch"
 
 # Alias tmux to use 256 colors
 alias tmux='tmux -2'
+
+alias pretty="python -m json.tool"

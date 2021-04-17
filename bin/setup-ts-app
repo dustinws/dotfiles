@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Initialize the git repository
+git init
+
+# Add a node .gitignore
+wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
+
+# Copy basic package.json
+cp ~/Dotfiles/boilerplate/ts.package.json package.json
+
+# Install base dependencies
+npm i -D typescript tslint ts-jest jest @types/jest
+
+# Initialize dependencies
+npx tslint --init
+npx tsc --init
+npx ts-jest config:init
+
+# Set up .nvmrc with the current node version
+echo $(node -v) > .nvmrc
+
+# Touch the initial js file
+touch index.js
+
+# Create the first commit
+git add .
+git commit -m 'Initial commit'

@@ -7,8 +7,10 @@ git init
 wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
 
 # Initialize the package.json
-# I prefer an empty json object over all of the defauls
-echo "{}" > package.json
+npm init -y
+
+# Set up .nvmrc with the current node version
+echo $(node -v) > .nvmrc
 
 # Touch the initial js file
 touch index.js
