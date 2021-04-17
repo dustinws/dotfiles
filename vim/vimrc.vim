@@ -45,7 +45,8 @@ let g:hybrid_transparent_background = 1
 " colorscheme hybrid_material
 colorscheme hybrid_reverse 
 
-" Show line numbers
+" Set hybrid line numbers
+set number
 set relativenumber
 
 " Change the color of the line numbers
@@ -69,8 +70,8 @@ set backspace=indent,eol,start
 let mapleader = ','
 
 " Enforce UTF8 encoding
-set encoding=UTF-8
 
+set encoding=UTF-8
 
 
 
@@ -134,6 +135,13 @@ imap jj <Esc>
 " This helps to speed up smooth scrolling
 nnoremap <C-e> 5<C-e>
 
+" Do the same for Ctrl Y scrolling
+nnoremap <C-y> 5<C-y>
+
+" Shortcut to open a terminal on the fly
+nmap <Leader>t :term<cr>
+
+
 
 
 
@@ -149,12 +157,6 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Allow Ctrl E scrolling to move five lines each scroll
-" Helpful for faster scrolling.
-nnoremap <C-e> 5<C-e>
-
-" Do the same for Ctrl Y scrolling
-nnoremap <C-y> 5<C-y>
 
 
 
