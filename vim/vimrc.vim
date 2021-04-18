@@ -113,7 +113,7 @@ nnoremap o o<Esc>
 nnoremap O O<Esc>
 
 " Easily edit the vimrc file
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :tabedit ~/Dotfiles/vim/vimrc.vim<cr>
 
 " Shorcut fro quitting a file
 nmap <Leader>q :q<cr>
@@ -149,7 +149,11 @@ nnoremap <C-y> 5<C-y>
 " Shortcut to open a terminal on the fly
 nmap <Leader>t :term<cr>
 
-
+" Map pane switching to something more sensible
+nnoremap <Leader>j <C-W><C-J>
+nnoremap <Leader>k <C-W><C-K>
+nnoremap <Leader>l <C-W><C-L>
+nnoremap <Leader>h <C-W><C-H>
 
 
 
