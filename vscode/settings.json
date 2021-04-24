@@ -1,0 +1,88 @@
+{
+  // ---------------------------------------------------------------------------
+  // Display Settings
+  // ---------------------------------------------------------------------------
+
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.lineHeight": 30,
+  "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 22,
+  "editor.fontWeight": "200",
+  "editor.rulers": [80],
+  "terminal.integrated.fontSize": 18,
+  "editor.lineNumbers": "relative",
+
+
+  // ---------------------------------------------------------------------------
+  // Tabs
+  // ---------------------------------------------------------------------------
+
+  "editor.tabSize": 2,
+
+
+  // ---------------------------------------------------------------------------
+  // Minimalist Settings
+  // ---------------------------------------------------------------------------
+
+  "editor.folding": false,
+  "editor.minimap.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+
+
+  // ---------------------------------------------------------------------------
+  // Editor Behavior
+  // ---------------------------------------------------------------------------
+
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.renderWhitespace": "none",
+
+
+  // ---------------------------------------------------------------------------
+  // Language Settings
+  // ---------------------------------------------------------------------------
+
+  "typescript.preferences.quoteStyle": "single",
+
+
+  // ---------------------------------------------------------------------------
+  // Plugin Settings
+  // ---------------------------------------------------------------------------
+
+  "liveshare.authenticationProvider": "GitHub",
+
+
+  // ---------------------------------------------------------------------------
+  // Vim Settings
+  // ---------------------------------------------------------------------------
+
+  // Change the leader key
+  "vim.leader": ",",
+
+  // Key Bindings for insert mode
+  "vim.insertModeKeyBindings": [
+    // Allow double tapping "jj" to go back to normal mode
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  // Key bindings for normal mode
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Allow the "new line below current" command to stay in normal mode
+    {
+      "before": ["o"],
+      "after": ["o", "<Esc>"]
+    },
+
+    // Allow the "new line above current" command to stay in normal mode
+    {
+      "before": ["O"],
+      "after": ["O", "<Esc>"]
+    },
+  ]
+}
