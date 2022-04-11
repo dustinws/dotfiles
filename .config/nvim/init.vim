@@ -1,6 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'akinsho/bufferline.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'liuchengxu/vim-clap'
+Plug 'glepnir/dashboard-nvim'
 Plug 'tpope/vim-sensible'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -37,7 +45,9 @@ filetype plugin indent on
 set hidden		                  " Required to keep multiple buffers open
 colorscheme onehalfdark                   " Set the color scheme
 hi Normal guibg=None ctermbg=None         " Transparent BG for vim
+hi NvimTreeNormal guibg=None ctermbg=None " Transparent BG for Nvim Tree
 highlight clear LineNr			  " Transparent BG for line numbers
+set termguicolors
 set number                                " Show line numbers
 set relativenumber                        " Show relative line numbers
 set ruler                                 " Show the cursor position at all times
@@ -90,6 +100,12 @@ nmap <C-p> :CtrlP<cr>
 " Change the vim move modifier to the control key
 let g:move_key_modifier = 'C'
 
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+
+nnoremap <silent>gt :BufferLineCycleNext<CR>
+nnoremap <silent>gT :BufferLineCyclePrev<CR>
+
+
 " Elm Language Server
 lua << EOF
 require'nvim-tree'.setup()
@@ -101,6 +117,17 @@ require'lualine'.setup {
     theme = 'nord'
   }
 }
+require('nightfox').setup({
+  options = {
+    styles = {
+      comments = "italic",
+      keywords = "bold",
+      types = "italic,bold",
+    }
+  }
+})
+require("bufferline").setup{}
+require('gitsigns').setup()
 EOF
 
 nmap <Leader>g :Goyo<cr>

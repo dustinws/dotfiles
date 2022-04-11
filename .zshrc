@@ -64,13 +64,26 @@ alias stat='git status'  # 'status' is protected name so using 'stat' instead
 # Path
 # ----
 
-export PATH=$PATH:/home/dustin/bin
-export PATH=$PATH:/home/dustin/.local/bin
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/.local/bin
+
+export IHP_EDITOR="code --goto"
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 
+export PATH=$PATH:/usr/local/lib/python3.9/site-packages
+export PATH=$PATH:$ANDROID_HOME/emulator:$PATH
+export PATH=$PATH:$ANDROID_HOME/tools:$PATH
+export PATH=$PATH:$ANDROID_HOME/tools/bin:$PATH
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:~/.local/bin
 
-# Startup Commands
-# ----------------
+
+# Startup
+# -------
 
 pfetch
 motivate
+
