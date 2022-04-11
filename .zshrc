@@ -60,6 +60,11 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 
+# Tmux
+alias tml="tmux list-sessions"
+alias tma="tmux attach-session -t"
+alias tmn="tmux new -s"
+
 
 # Path
 # ----
