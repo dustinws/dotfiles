@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'liuchengxu/vim-clap'
@@ -126,7 +126,7 @@ require('nightfox').setup({
     }
   }
 })
-require("bufferline").setup{}
+-- require("bufferline").setup{}
 require('gitsigns').setup()
 EOF
 
