@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Plug 'akinsho/bufferline.nvim'
+Plug 'Mofiqul/dracula.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'liuchengxu/vim-clap'
@@ -43,7 +44,7 @@ set t_Co=256
 syntax on
 filetype plugin indent on
 set hidden		                  " Required to keep multiple buffers open
-colorscheme onehalfdark                   " Set the color scheme
+colorscheme dracula                       " Set the color scheme
 hi Normal guibg=None ctermbg=None         " Transparent BG for vim
 hi NvimTreeNormal guibg=None ctermbg=None " Transparent BG for Nvim Tree
 highlight clear LineNr			  " Transparent BG for line numbers
@@ -132,4 +133,18 @@ EOF
 
 nmap <Leader>g :Goyo<cr>
 
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
