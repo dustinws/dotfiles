@@ -97,3 +97,8 @@ unset __conda_setup
 
 alias python="/opt/anaconda3/bin/python"
 
+
+alias sonarqube="~/bin/sonarqube/bin/macosx-universal-64/sonar.sh"
+alias sonar-scanner="~/bin/sonar-scanner/bin/sonar-scanner"
+
+[ -f "/Users/dustin/.ghcup/env" ] && source "/Users/dustin/.ghcup/env" # ghcup-env
