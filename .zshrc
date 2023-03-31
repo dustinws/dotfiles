@@ -27,7 +27,7 @@ if [ -e /home/dustin/.nix-profile/etc/profile.d/nix.sh ]; then . /home/dustin/.n
 # User Settings
 # -------------
 
-export TERM="xterm-256color" 
+export TERM="screen-256color" 
 
 
 # Aliases
@@ -68,28 +68,6 @@ alias tmn="tmux new -s"
 
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
-export IHP_EDITOR="code --goto"
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-  export ANDROID_HOME=$HOME/Library/Android/sdk
-  export PATH=$PATH:/usr/local/lib/python3.9/site-packages
-  export PATH=$PATH:$ANDROID_HOME/emulator:$PATH
-  export PATH=$PATH:$ANDROID_HOME/tools:$PATH
-  export PATH=$PATH:$ANDROID_HOME/tools/bin:$PATH
-  export PATH=$PATH:$ANDROID_HOME/platform-tools:$PATH
-  export JAVA_HOME=$(/usr/libexec/java_home)
-fi
-
-
-
-# Linux Homebrew
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-  test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
-  echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
-fi
 
 
 # Direnv Initialization
