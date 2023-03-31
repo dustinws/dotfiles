@@ -89,7 +89,7 @@ set t_Co=256
 syntax on
 filetype plugin indent on
 set hidden		                  " Required to keep multiple buffers open
-colorscheme onedark                       " Set the color scheme
+colorscheme catppuccin-latte                       " Set the color scheme
 " hi Normal guibg=None ctermbg=None         " Transparent BG for vim
 " hi NvimTreeNormal guibg=None ctermbg=None " Transparent BG for Nvim Tree
 " highlight clear LineNr			  " Transparent BG for line numbers
