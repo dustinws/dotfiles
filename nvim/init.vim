@@ -4,7 +4,8 @@ call plug#begin('~/.vim/plugged')
 
 """" Language Support Plugins """"
 " ------------------------------ "
-
+" Github Copilot
+Plug 'github/copilot.vim'
 " Language Server Base
 Plug 'neovim/nvim-lspconfig'
 " Conquer of Completion Snippets
@@ -36,8 +37,8 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'neoclide/coc-snippets'
 " LSP Icons
 Plug 'onsails/lspkind.nvim'
-
-
+" Ctrl P
+Plug 'ctrlpvim/ctrlp.vim'
 
 """" Themes """"
 " ------------ "
@@ -57,10 +58,7 @@ Plug 'navarasu/onedark.nvim'
 """" Neovim Feature Plugins """"
 " ---------------------------- "
 
-" Dependency for Telescope
-Plug 'nvim-lua/plenary.nvim'
-" Visual Fuzzy Finder
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'karb94/neoscroll.nvim'
 " Enable nice defaults to make vim feel more like a regular editor
 Plug 'tpope/vim-sensible'
 " Show git indicators in the gutter
@@ -88,8 +86,8 @@ let g:mapleader = ','                     " Set the leader key
 set t_Co=256
 syntax on
 filetype plugin indent on
+colorscheme tokyonight-day                       " Set the color scheme
 set hidden		                  " Required to keep multiple buffers open
-colorscheme catppuccin-latte                       " Set the color scheme
 " hi Normal guibg=None ctermbg=None         " Transparent BG for vim
 " hi NvimTreeNormal guibg=None ctermbg=None " Transparent BG for Nvim Tree
 " highlight clear LineNr			  " Transparent BG for line numbers
@@ -98,7 +96,8 @@ set number                                " Show line numbers
 set relativenumber                        " Show relative line numbers
 set ruler                                 " Show the cursor position at all times
 set mouse=a			          " Allow the mouse to work
-set shiftwidth=2                          " Use two spaces for indentation
+set tabstop=4
+set shiftwidth=4                          " Use four spaces for indentation
 set smarttab                              " Allow dynamic tabs based on the file
 set autoindent			          " Allow nvim to automatically indent code
 set laststatus=0                          " Always display the status line
@@ -144,7 +143,7 @@ nmap <Leader><space> :nohlsearch<cr>
 " Change the vim move modifier to the control key
 let g:move_key_modifier = 'C'
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+" nnoremap <leader>ff <cmd>Telescope find_files<cr>
 
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
@@ -164,23 +163,31 @@ nmap <silent> <leader>g :call CocAction('doHover')<CR>
 nmap <silent> <leader>u <Plug>(coc-references)
 nmap <silent> <leader>p :call CocActionAsync('format')<CR>
 
-
+" Ctrl P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " LUA Plugin Initializations
-" require('lspconfig').elmls.setup{}
 lua << EOF
-require'nvim-tree'.setup()
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ps', function()
-	builtin.live_grep()
-end)
-
+require'nvim-tree'.setup({
+	filters = {
+		dotfiles = false,
+		custom = { '^.git$' },
+	},
+	git = {
+		enable = true,
+		ignore = false,
+		timeout = 500,
+	},
+})
+require('neoscroll').setup()
 require'lualine'.setup {
   options = {
     component_separators = {'', ''},
     section_separators = {'', ''},
-    theme = 'palenight'
+
+    theme = 'ayu_light'
   }
 }
 
@@ -200,4 +207,3 @@ require('lspkind').init({
   preset = 'codicons',
 })
 EOF
-
