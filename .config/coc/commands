@@ -1,0 +1,4 @@
+document.toggleInlayHint
+editor.action.organizeImport
+workspace.diagnosticRelated
+document.showOutgoingCalls
