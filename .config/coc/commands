@@ -1,3 +1,4 @@
+workspace.diagnosticRelated
 document.toggleInlayHint
 editor.action.organizeImport
 workspace.diagnosticRelated

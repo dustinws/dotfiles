@@ -1,5 +1,6 @@
-nnoremap <C-p> :Telescope find_files<cr>
-nnoremap <leader>g :Telescope live_grep<cr>
+nnoremap <C-p> :Telescope git_files<cr>
+nnoremap <leader>pf :Telescope find_files<cr>
+nnoremap <leader>pg :Telescope live_grep<cr>
 
 lua << EOF
 local M = {}
