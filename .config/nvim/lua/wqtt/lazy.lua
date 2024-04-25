@@ -15,6 +15,7 @@ require("lazy").setup({
 	{ import = "wqtt.plugins" },
 	{ import = "wqtt.plugins.lsp" },
 	{ import = "wqtt.plugins.dap" },
+	{ import = "wqtt.plugins.themes" },
 }, {
 	change_detection = {
 		enabled = true,

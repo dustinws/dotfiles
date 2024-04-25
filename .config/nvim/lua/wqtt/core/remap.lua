@@ -8,3 +8,5 @@ vim.keymap.set("n", "<leader>wa", ":wa<CR>", { desc = "Write all open buffers" }
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 
 vim.keymap.set("n", "<leader>ns", ":source ~/.config/nvim/init.lua<CR>", { desc = "Source the nvim configuration" })
+
+vim.keymap.set("n", "<leader>rgm", ":! go run main.go<CR>", { desc = "Run the main.go file" })
