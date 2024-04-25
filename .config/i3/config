@@ -183,15 +183,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status -c /home/dustin/.config/i3status/i3status.conf
-}
-
 gaps inner 15
 
 for_window [class="^.*"] border pixel 0
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -c --corner-radius 10 --vsync --backend glx
+exec_always --no-startup-id ~/polybar.sh &

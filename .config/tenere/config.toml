@@ -1,0 +1,6 @@
+archive_file_name = "tenere.archive"
+llm  = "ollama"
+
+[ollama]
+url = "http://localhost:11434/api/chat"
+model = "llama3"

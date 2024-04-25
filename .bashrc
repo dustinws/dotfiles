@@ -27,6 +27,7 @@ fi
 # ---- Bash Aliases ---- #
 # ---------------------- #
 
+alias c="clear"
 alias lg="lazygit"
 alias ldr="lazydocker"
 alias ls=eza
