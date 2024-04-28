@@ -10,4 +10,5 @@ if [[ $- == *i* && -f ~/.bashrc ]]; then
     . ~/.bashrc
 fi
 
-. "$HOME/.cargo/env"
+# If running from tty1 start sway
+[ "$(tty)" = "/dev/tty1" ] && exec sway

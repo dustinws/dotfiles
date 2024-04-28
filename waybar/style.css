@@ -1,0 +1,77 @@
+@import "./rose-pine-dawn.css";
+
+* {
+  font-family: "JetbrainsMono Nerd Font", "Font Awesome 5 Free";
+  font-size: 1.03em;
+}
+
+window#waybar {
+  background: transparent;
+  box-shadow: 0 5px;
+  color: @text;
+}
+
+.modules-left {
+  margin: 6px;
+}
+
+.modules-right {
+  margin: 6px;
+  border-radius: 6px;
+  background: @highlightHigh;
+}
+
+.modules-right .module {
+  padding-left: 0.8em;
+}
+.modules-right .module:last-child {
+  padding-right: 0.8em;
+}
+
+#clock {
+  background: @highlightHigh;
+  color: @gold;
+  padding: 0 50px;
+  margin: 6px;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#memory {
+  color: @foam;
+}
+
+#temperature {
+  color: @rose;
+}
+
+#cpu {
+  color: @pine;
+}
+
+#network {
+  color: @love;
+}
+
+#pulseaudio {
+  color: @iris;
+}
+
+#battery {
+  color: @foam;
+}
+#workspaces button {
+  color: @highlightHigh;
+  background: transparent;
+  margin-right: 5px;
+  border-radius: 6px;
+  border: 1px solid @highlightHigh;
+}
+
+#workspaces button.focused {
+  background: @highlightHigh;
+  color: @gold;
+  font-weight: bold;
+  border: none;
+}

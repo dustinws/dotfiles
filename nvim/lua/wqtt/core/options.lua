@@ -27,3 +27,9 @@ vim.opt.backspace = "indent,eol,start"
 
 -- Use system clipboard as default register
 vim.opt.clipboard:append("unnamedplus")
+
+vim.cmd([[
+    set nobackup       "no backup files
+    set nowritebackup  "only in case you don't want a backup file while editing
+    set noswapfile     "no swap files
+]])
